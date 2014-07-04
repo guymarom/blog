@@ -30,9 +30,15 @@
     </div>
 
     <div class="entryDiv" ng-show="displayEntry">
-        Email <input type="text" id="entryAuthorEmail" class="entryInput" ng-model="entryAuthorEmail"/>
-        Title <input type="text" id="entryTitle" class="entryInput" ng-model="entryTitle"/>
-        Content <textarea id="entryContent" class="entryInput" ng-model="entryContent"></textarea>
+        <label for="entryAuthorEmail">Email </label>
+        <input type="text" id="entryAuthorEmail" class="entryInput"
+               ng-model="entryAuthorEmail"/>
+        <label for="entryTitle">Title </label>
+        <input type="text" id="entryTitle" class="entryInput"
+               ng-model="entryTitle"/>
+        <label for="entryContent">Content </label>
+        <textarea id="entryContent" class="entryInput"
+                  ng-model="entryContent"></textarea>
         <br/><br/>
         <button class="entryButton" ng-click="hideAndResetEntry()">{{hideButtonText}}</button>
         <button class="entryButton" ng-show="showSaveButton" ng-click="createNewEntry()">Save</button>

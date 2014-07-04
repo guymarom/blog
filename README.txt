@@ -19,3 +19,4 @@ Todos
 #Add tests
 #System should work either locally or on any cloud provider
 #Code should be polished and elegant
+#Provide war??
