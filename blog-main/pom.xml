@@ -65,6 +65,27 @@
 
     </dependencies>
 
-    <!-- todo make it cloud ready -->
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.outbrain.blog.app.BlogApplicationMain</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>blog-me-do</finalName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -17,6 +17,6 @@ Todos
 #Show said errors in UI
 #Improve look and feel
 #Add tests
-#System should work either locally or on any cloud provider
+#System should work on any cloud provider
 #Code should be polished and elegant
 #Provide war??

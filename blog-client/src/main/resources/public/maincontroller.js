@@ -50,7 +50,7 @@ app.controller("mainController", function ($scope, $http) {
         loadLatestTenEntries();
     }
 
-    function resetEntry() {
+    function clearEntryData() {
         populateEntryData({
             authorEmail: '',
             title      : '',
@@ -60,7 +60,7 @@ app.controller("mainController", function ($scope, $http) {
 
     function hideAndResetEntry() {
         hideEntryDiv();
-        resetEntry();
+        clearEntryData();
     }
 
     $scope.hideAndResetEntry = hideAndResetEntry;
@@ -69,10 +69,17 @@ app.controller("mainController", function ($scope, $http) {
         $scope.hideButtonText = text;
     }
 
+    var dialogCurrentlyVisible = function () {
+        return $scope.showSaveButton;
+    };
+
     $scope.showCreateEntryDialog = function showCreateEntryDialog() {
-        setHideButtonText('Cancel');
-        showSaveButton();
-        showEntryDiv();
+        if (!dialogCurrentlyVisible()) {
+            clearEntryData();
+            setHideButtonText('Cancel');
+            showSaveButton();
+            showEntryDiv();
+        }
     };
 
     function getEntryFromDialog() {
