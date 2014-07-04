@@ -19,7 +19,7 @@
                 <th>Title</th>
                 <th>Content</th>
             </tr>
-            <tr ng-repeat="blogEntry in blogEntries" ng-click="loadEntry(blogEntry)">
+            <tr ng-repeat="blogEntry in blogEntries" ng-click="loadEntry(blogEntry)" class="blogEntry">
                 <td>{{blogEntry.authorEmail}}</td>
                 <td>{{blogEntry.title}}</td>
                 <td>{{blogEntry.content}}</td>
