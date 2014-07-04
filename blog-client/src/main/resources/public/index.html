@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Me Do</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.14/angular.min.js"
+            type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="maincontroller.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body ng-app='blogMeDo'>
+<h1>Blog Me Do</h1>
+
+<div id="content" ng-controller="mainController">
+    <div class="tableDiv">
+        <table>
+            <tr>
+                <th>Author Email</th>
+                <th>Title</th>
+                <th>Content</th>
+            </tr>
+            <tr ng-repeat="blogEntry in blogEntries" ng-click="loadEntry(blogEntry)">
+                <td>{{blogEntry.authorEmail}}</td>
+                <td>{{blogEntry.title}}</td>
+                <td>{{blogEntry.content}}</td>
+            </tr>
+        </table>
+        <br>
+        <button class="entryButton" ng-click="showCreateEntryDialog()">Add Entry</button>
+    </div>
+
+    <div class="entryDiv" ng-show="displayEntry">
+        Email <input type="text" id="entryAuthorEmail" class="entryInput" ng-model="entryAuthorEmail"/>
+        Title <input type="text" id="entryTitle" class="entryInput" ng-model="entryTitle"/>
+        Content <textarea id="entryContent" class="entryInput" ng-model="entryContent"></textarea>
+        <br/><br/>
+        <button class="entryButton" ng-click="hideAndResetEntry()">{{hideButtonText}}</button>
+        <button class="entryButton" ng-show="showSaveButton" ng-click="createNewEntry()">Save</button>
+    </div>
+</div>
+</body>
+</html>

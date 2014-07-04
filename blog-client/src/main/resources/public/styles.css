@@ -1,0 +1,22 @@
+.tableDiv {
+    float: left;
+    margin-right: 80px;
+}
+
+.entryDiv {
+    float: left;
+    width: 300px;
+}
+
+.entryInput {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.entryButton {
+    float: right;
+}
+
+.input {
+    display: block;
+}
