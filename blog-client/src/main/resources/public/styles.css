@@ -1,11 +1,18 @@
+#content {
+    padding-top: 40px;
+    padding-left: 200px;
+}
+
 .tableDiv {
     float: left;
+    width: 400px;
     margin-right: 80px;
 }
 
 .entryDiv {
     float: left;
     width: 300px;
+    padding-top: 60px;
 }
 
 .entryInput {
@@ -15,7 +22,7 @@
 
 .entryButton {
     float: right;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .input {
@@ -29,9 +36,19 @@
 th {
     min-width: 50px;
     padding: 10px;
+    padding-bottom: 15px;
+    border-bottom: solid;
 }
 
 td {
     min-width: 50px;
     padding: 10px;
+}
+
+.entriesTable {
+    width: 100%;
+}
+
+h1 {
+    padding-bottom: 40px;
 }

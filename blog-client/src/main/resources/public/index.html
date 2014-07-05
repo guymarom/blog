@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body ng-app='blogMeDo'>
-<h1>Blog Me Do</h1>
 
 <div id="content" ng-controller="mainController">
+    <h1>Blog Me Do</h1>
     <div class="tableDiv">
-        <table>
+        <table class="entriesTable">
             <tr>
                 <th>Author Email</th>
                 <th>Title</th>
@@ -34,7 +34,7 @@
             </tr>
         </table>
         <br>
-        <button class="entryButton" ng-click="showCreateEntryDialog()">Add Entry</button>
+        <button ng-click="showCreateEntryDialog()">Add Entry</button>
     </div>
 
     <div class="entryDiv" ng-show="displayEntry">
