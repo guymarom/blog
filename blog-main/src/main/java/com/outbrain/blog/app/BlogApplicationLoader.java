@@ -33,7 +33,7 @@ public class BlogApplicationLoader {
     @EnableJpaRepositories(basePackages = "com.outbrain.blog.repositories")
     @EnableAutoConfiguration
     @Import(RepositoryRestMvcConfiguration.class)
-    static class BlogApplicationContext {
+    public static class BlogApplicationContext {
 
         @Bean
         DataSource dataSource() {
