@@ -95,7 +95,12 @@ app.controller("mainController", function ($scope, $http) {
     }
 
     function errorAddingEntry(data, status, headers, config) {
-        console.error("Error adding entry, status: " + status);
+        if (status == 500) {
+            alert("Error adding entry, status: " + 500 + ".\n" +
+                "Please make sure the email is valid and that the title is not empty");
+        } else {
+            alert("Error adding entry, status: " + 500 + ". Message: " + data.message);
+        }
     }
 
     $scope.createNewEntry = function createNewEntry() {

@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body ng-app='app'>
-
 <div id="content" ng-controller="mainController">
     <h1>Blog Me Do</h1>
+
     <div class="tableDiv">
         <table class="entriesTable">
             <tr>
@@ -48,8 +48,12 @@
         <textarea id="entryContent" class="entryInput"
                   ng-model="entryContent" tabindex="30"></textarea>
         <br/><br/>
-        <button id="hideEntryButton" class="entryButton" ng-click="hideAndResetEntry()" tabindex="50">{{hideButtonText}}</button>
-        <button  id="saventryButton" class="entryButton" ng-show="showSaveButton" ng-click="createNewEntry()" tabindex="40">Save</button>
+        <button id="hideEntryButton" class="entryButton" ng-click="hideAndResetEntry()" tabindex="50">
+            {{hideButtonText}}
+        </button>
+        <button id="saventryButton" class="entryButton" ng-show="showSaveButton" ng-click="createNewEntry()"
+                tabindex="40">Save
+        </button>
     </div>
 </div>
 </body>

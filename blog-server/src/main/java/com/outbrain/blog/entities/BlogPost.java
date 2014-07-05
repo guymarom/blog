@@ -28,7 +28,7 @@ public class BlogPost {
     @Column(nullable = false)
     private String authorEmail;
 
-    @Column(length = 150, nullable = false, unique = true)
+    @Column(length = 150, nullable = false)
     @Size(min = 1, max = 150)
     private String title;
 
