@@ -6,9 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.PrePersist;
 import javax.persistence.TableGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 /**
  * User: maromg
@@ -36,6 +40,10 @@ public class BlogPost {
     @Lob
     private String content;
 
+    @Temporal(value = TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Date created;
+
     public long getId() {
         return id;
     }
@@ -62,6 +70,16 @@ public class BlogPost {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+
+    @PrePersist
+    void setCreatedDate() {
+        this.created = new Date();
     }
 
     @Override

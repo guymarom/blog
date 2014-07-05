@@ -20,7 +20,7 @@ describe("The main controller", function () {
     beforeEach(module("app"));
 
     function initHttpBackend($httpBackend) {
-        $httpBackend.whenGET(BASE_URL + "?page=0&size=10&sort=id,desc")
+        $httpBackend.whenGET(BASE_URL + "?page=0&size=10&sort=created,desc")
             .respond({
                 _embedded: {
                     blogposts: [entry]
