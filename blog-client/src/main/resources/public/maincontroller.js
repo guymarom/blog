@@ -95,7 +95,7 @@ app.controller("mainController", function ($scope, $http) {
     }
 
     function errorAddingEntry(data, status, headers, config) {
-        alert(data);
+        console.error("Error adding entry, status: " + status);
     }
 
     $scope.createNewEntry = function createNewEntry() {

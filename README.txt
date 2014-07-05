@@ -14,8 +14,5 @@ Arguments
 Todos
 =====
 #Return 400 on validation errors (Not a valid email, etc.)
-#Show said errors in UI
-#Improve look and feel
-#Add tests
-#Code should be polished and elegant
-#Provide war??
+#UI error handling when adding an invalid entry (Empty, invalid email etc.)
+#Add jasmine tests
