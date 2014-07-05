@@ -21,7 +21,6 @@ public class DemoDataPopulator {
 
     private void createBlogPost(int i) {
         BlogPost blogPost = createBlogPostEntity(i);
-        //todo replace with slf4j?
         System.out.println("================================");
         System.out.println("Posting to blog " + blogPost);
         postBlogPost(blogPost);

@@ -9,7 +9,7 @@ Prerequisites
 
 Arguments
 =========
--Dserver.port - Sets the server's port. Default 8080
+-Dserver.port - Sets the server's port. Default is 8080
 
 Todos
 =====
@@ -17,6 +17,5 @@ Todos
 #Show said errors in UI
 #Improve look and feel
 #Add tests
-#System should work on any cloud provider
 #Code should be polished and elegant
 #Provide war??
