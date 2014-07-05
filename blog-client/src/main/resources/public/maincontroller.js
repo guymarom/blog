@@ -15,6 +15,7 @@ app.controller("mainController", function ($scope, $http) {
     }
 
     function populateAndDisplayEntry(entry) {
+        showEntryDiv();
         populateEntryData(entry);
         setHideButtonText('Hide');
         hideSaveButton();
@@ -24,9 +25,7 @@ app.controller("mainController", function ($scope, $http) {
     $scope.loadEntry = function loadEntry(entry) {
         var url = entry._links.self.href;
         $http.get(url)
-            .success(function test(entry) {
-                populateAndDisplayEntry(entry);
-            });
+            .success(populateAndDisplayEntry);
     };
 
     function showSaveButton() {
@@ -69,15 +68,15 @@ app.controller("mainController", function ($scope, $http) {
         $scope.hideButtonText = text;
     }
 
-    var dialogCurrentlyVisible = function () {
-        return $scope.showSaveButton;
+    var dialogCurrentlyVisible = function dialogCurrentlyVisible() {
+        return $scope.displayEntry;
     };
 
     $scope.showCreateEntryDialog = function showCreateEntryDialog() {
+        clearEntryData();
+        setHideButtonText('Cancel');
+        showSaveButton();
         if (!dialogCurrentlyVisible()) {
-            clearEntryData();
-            setHideButtonText('Cancel');
-            showSaveButton();
             showEntryDiv();
         }
     };
