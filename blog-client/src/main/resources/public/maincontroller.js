@@ -1,8 +1,8 @@
 app.controller("mainController", function ($scope, $http) {
-    var BASE_URL = '/blogposts/';
+    var BASE_URL = "/blogposts/";
 
     function loadLatestTenEntries() {
-        $http.get(BASE_URL + '?page=0&size=10&sort=id,desc')
+        $http.get(BASE_URL + "?page=0&size=10&sort=id,desc")
             .success(function (result) {
                 $scope.blogEntries = result._embedded.blogposts;
             });
@@ -17,7 +17,7 @@ app.controller("mainController", function ($scope, $http) {
     function populateAndDisplayEntry(entry) {
         showEntryDiv();
         populateEntryData(entry);
-        setHideButtonText('Hide');
+        setHideButtonText("Hide");
         hideSaveButton();
         showEntryDiv();
     }
@@ -51,9 +51,9 @@ app.controller("mainController", function ($scope, $http) {
 
     function clearEntryData() {
         populateEntryData({
-            authorEmail: '',
-            title      : '',
-            content    : ''
+            authorEmail: "",
+            title      : "",
+            content    : ""
         });
     }
 
@@ -74,7 +74,7 @@ app.controller("mainController", function ($scope, $http) {
 
     $scope.showCreateEntryDialog = function showCreateEntryDialog() {
         clearEntryData();
-        setHideButtonText('Cancel');
+        setHideButtonText("Cancel");
         showSaveButton();
         if (!dialogCurrentlyVisible()) {
             showEntryDiv();
