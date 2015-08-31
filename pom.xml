@@ -16,7 +16,7 @@
   <distributionManagement>
     <repository>
       <id>Outbrain-Bintray</id>
-      <url>https://api.bintray.com/content/guymarom/maven/blog/</url>
+      <url>https://api.bintray.com/maven/guymarom/maven/blog/</url>
     </repository>
   </distributionManagement>
 
