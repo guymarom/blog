@@ -11,7 +11,7 @@
   <groupId>com.outbrain</groupId>
   <artifactId>blog</artifactId>
   <packaging>pom</packaging>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.4</version>
 
   <distributionManagement>
     <repository>
@@ -22,7 +22,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/guymarom/blog.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>blog-1.4</tag>
   </scm>
 
   <dependencyManagement>
