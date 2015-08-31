@@ -22,7 +22,7 @@
     </distributionManagement>
 
     <scm>
-        <url>https://github.com/guymarom/blog/</url>
+        <connection>scm:git:https://github.com/guymarom/blog/</connection>
     </scm>
 
     <dependencyManagement>
