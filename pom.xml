@@ -23,6 +23,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/guymarom/blog/</connection>
+        <developerConnection>scm:git:https://github.com/guymarom/blog/</developerConnection>
     </scm>
 
     <dependencyManagement>
